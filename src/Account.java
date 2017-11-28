@@ -56,9 +56,14 @@ public abstract class Account {
 	
 	//Transactions
 	public void withdrawMoney(float withdrawal) {
-		balance -= withdrawal;
-		Transaction withdrawalTransaction = new Transaction(withdrawal, "Withdrew Money");
-		this.addTransaction(withdrawalTransaction);
+		if (balance >= withdrawal) {
+			balance -= withdrawal;
+			Transaction withdrawalTransaction = new Transaction(withdrawal, "Withdrew Money");
+			this.addTransaction(withdrawalTransaction);
+		}
+		if (balance < withdrawal) {
+			System.out.println("ERROR. Insufficient funds to complete withdrawal.");
+		}
 	}
 	
 	public void depositMoney(float deposit) {
