@@ -31,10 +31,12 @@ public class BankSystem {
 				}
 				else {
 					System.out.println("ERROR. Incorrect Password.");
+					return;
 				}
 			}
 			else {
 				System.out.println("ERROR. Account number does not exist.");
+				return;
 			}
 		}
 		return null;
@@ -48,10 +50,12 @@ public class BankSystem {
 				}
 				else {
 					System.out.println("ERROR. Incorrect Password.");
+					return;
 				}
 			}
 			else {
 				System.out.println("ERROR. Account number does not exist.");
+				return;
 			}
 		}
 		return null;
