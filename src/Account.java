@@ -63,6 +63,7 @@ public abstract class Account {
 		}
 		if (balance < withdrawal) {
 			System.out.println("ERROR. Insufficient funds to complete withdrawal.");
+			return;
 		}
 	}
 	
