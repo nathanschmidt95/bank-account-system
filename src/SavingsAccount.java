@@ -21,6 +21,7 @@ public class SavingsAccount extends Account {
 		}
 		if (withdrawLimit == 0) {
 			System.out.println("ERROR: No more withdrawals allowed.");
+			return;
 		}
 	}
 	
